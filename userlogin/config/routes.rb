@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root "application#index"
   resources :useraccount
   resources :login
-
+  delete 'logout', to: 'login#destroy'
 
 end

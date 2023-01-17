@@ -19,8 +19,7 @@ class LoginController < ApplicationController
     end
 
     def destroy
-        # Remove the user id from the session
-        @_current_user = session[:current_user_id] = nil 
+        session.delete(:current_user_id)
         render json: "Logged out successfully"        
     end
 
